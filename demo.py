@@ -1,12 +1,13 @@
 from fixed_point import fixed_point
 
-# Non-recursive.
+# Non-recursive.  A dumb place to use @fixed_point, but it's nice that it works.
 @fixed_point(int)
 def square(arg, unused_recurse):
     return arg * arg
 print square(5)
 
-# Normal, non-cyclic recursion.
+# Normal, non-cyclic recursion. Again, a dumb place to use @fixed_point, but
+# it's nice that it works.
 @fixed_point(int)
 def fibo(arg, recurse):
     if arg in (0, 1):
